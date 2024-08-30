@@ -1,16 +1,22 @@
 let container_box=document.getElementById("container");
+let ERR=document.getElementById("ERROR");
 async function Load (value){
     try{
         let res=await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${value}`);
     let data=await res.json();
     
-   
+    ERR.classList.add('hidden')
     display(data[0])
     }
     catch(err){
         toggleSpinner(false)
         let ERR=document.getElementById("ERROR");
-        ERR.classList.remove('hidden')
+        if(err){
+            ERR.classList.remove('hidden')
+        }
+        
+            
+        
         ERR.innerText="word incorrect.Not found!"
     }
 }
