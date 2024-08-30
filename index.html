@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="js/Style.css">
+</head>
+<body class="max-w-full">
+    <header class="p-8 bg-cyan-500">
+        <h1 class="text-5xl font-bold">Dictionary App</h1>
+    </header>
+    <main class="min-h-[80vh] w-2/4 container mx-auto mt-10 shadow-xl">
+        <!-- search Input -->
+        <section class="text-center sm:flex flex-col md:flex-row items-center justify-center">
+            <input type="text"placeholder="Type here"class="input focus:outline-black  bg-white shadow-md input-md w-3/5 mr-5" id="INPUT"/>
+            <button class="btn bg-cyan-500" onclick="searchHandaller()">Success</button>
+        </section>
+        <!-- loding -->
+        <section class="text-center mt-3 hidden" id="Spinner">
+           <div class="flex  justify-center items-center">
+            <h1 class=" items-center text-3xl font-medium">Fetching </h1>
+            <div><span class="loading loading-dots loading-md"></span></div>
+           </div>
+        </section>
+        <!-- not found 404 -->
+        <h1 id="ERROR" class="text-xl font-medium text-center mt-3 hidden"></h1>
+        <!-- word box -->
+        <section class="flex items-center justify-center mt-8 rounded-xl p-4">
+            
+            <form class=" w-4/5 bg-white shadow-xl p-4" id="container">
+                
+                
+            </form>
+        </section>
+    </main>
+    <footer class="p-8 text-center bg-cyan-500">
+        <p class="text-xl text-gray-300">@codeTraversal 2023-2024</p>
+    </footer>
+    
+    <script src="js/utility.js"></script>
+    </body>
